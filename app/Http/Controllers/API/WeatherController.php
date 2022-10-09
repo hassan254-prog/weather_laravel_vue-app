@@ -11,10 +11,17 @@ use RakibDevs\Weather\Weather;
 
 class WeatherController extends BaseController
 {
-    public function showWeather($city)
+    public function showCurrentWeather($city)
     {
         $wt = new Weather();
         $info = $wt->getCurrentByCity($city);   
+        return $this->handleResponse(['data' =>$info], 'Weather_info');
+    }
+
+    public function showForecastWeather($city)
+    {
+        $wt = new Weather();
+        $info = $wt->get3HourlyByCity($city);   
         return $this->handleResponse(['data' =>$info], 'Weather_info');
     }
 }

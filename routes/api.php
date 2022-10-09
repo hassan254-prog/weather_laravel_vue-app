@@ -14,4 +14,8 @@ use App\Http\Controllers\API\WeatherController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::get('weather/{city}', [WeatherController::class, 'showWeather']);
+Route::controller(WeatherController::class)
+    ->group(function () {
+        Route::get('weather/{city}', 'showCurrentWeather');
+        Route::get('weather_forecast/{city}', 'showForecastWeather');
+});
