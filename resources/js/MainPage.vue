@@ -72,14 +72,6 @@ export default {
                     errorBool = true;
             });
 
-            // await axios.get('/api/weather_forecast/'+city)
-            //     .then(response => {
-            //         this.hourlyData = response.data.data.data;
-            //     })
-            //     .catch(function() {
-            //         errorBool = true;
-            // });
-
             if(errorBool) {
                 this.$router.push('/');
             }

@@ -2543,13 +2543,6 @@ __webpack_require__.r(__webpack_exports__);
               });
 
             case 10:
-              // await axios.get('/api/weather_forecast/'+city)
-              //     .then(response => {
-              //         this.hourlyData = response.data.data.data;
-              //     })
-              //     .catch(function() {
-              //         errorBool = true;
-              // });
               if (errorBool) {
                 _this.$router.push('/');
               }
